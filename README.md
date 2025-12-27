@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, responsive landing page built with React and Create React App. This repository contains the source code, styles, and static assets used to build and deploy the site.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Project Overview](#project-overview)
+- [Architecture](#architecture)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Overview
 
-### `npm test`
+This project is a small single-page application (SPA) that serves as a landing page. It is built with React (Create React App), uses standard HTML/CSS for layout and styling, and produces a static production build suitable for hosting on static site services (Netlify, Vercel, GitHub Pages).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Architecture
 
-### `npm run build`
+- Type: Client-rendered Single Page Application (SPA)
+- Entry point: `public/index.html` -> `src/index.js`
+- Root component: `src/App.js`
+- Styling: global styles in `src/index.css` (small project — no CSS framework used)
+- Assets: `public/` contains favicons, manifest and static files
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Data and control flow:
+- Unidirectional React data flow; component state managed with React hooks.
+- Minimal routing (single page) — additional routes can be added with `react-router` if needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Diagram (simple):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+public/index.html
+  └─ src/index.js
+      └─ src/App.js
+          └─ src/ (components, styles)
 
-### `npm run eject`
+## Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React (Create React App)
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- NPM (package management)
+- Testing: Jest + React Testing Library (bundled with Create React App)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+landing-page/
+├─ public/
+│  ├─ index.html
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ src/
+│  ├─ App.js
+│  ├─ index.js
+│  ├─ index.css
+│  ├─ App.test.js
+│  └─ reportWebVitals.js
+├─ package.json
+└─ README.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+1. Install dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Run the app in development mode
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open http://localhost:3000 to view it in the browser.
 
-### Analyzing the Bundle Size
+3. Run tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm test
+```
 
-### Making a Progressive Web App
+4. Build for production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+```
 
-### Advanced Configuration
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Prioritized list of ideas to improve the project:
 
-### Deployment
+**High priority**
+- Make the layout fully responsive across breakpoints and test on mobile devices ✅
+- Improve accessibility (WCAG): semantic HTML, ARIA where needed, keyboard navigation ✅
+- Add end-to-end tests (Cypress / Playwright) to cover critical user flows
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Medium priority**
+- Add CI/CD pipeline (GitHub Actions) to run tests and deploy builds automatically
+- Add SEO improvements: meta tags, structured data, and server-side rendering (if needed)
+- Optimize images and static assets (webp, lazy loading)
 
-### `npm run build` fails to minify
+**Low priority**
+- Migrate to TypeScript for stronger typing and improved DX
+- Create a design system / component library for reuse
+- Add analytics and monitoring (Google Analytics / Sentry)
+- Implement Progressive Web App features (service worker, offline support)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you want, I can create issues for the above items and prioritize them.
+
+## Contributing
+
+Contributions are welcome — please open issues or pull requests with clear descriptions. Keep changes small and well tested.
+
+
