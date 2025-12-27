@@ -1,3 +1,5 @@
+<img width="1881" height="880" alt="Screenshot 2025-12-27 120922" src="https://github.com/user-attachments/assets/e9314b8c-7b19-4001-89f0-471d1d96f941" />
+<img width="1864" height="875" alt="Screenshot 2025-12-27 120944" src="https://github.com/user-attachments/assets/e93e84e2-070d-4a9b-a61c-f16568770ff5" />
 # Landing Page
 
 A simple, responsive landing page built with React and Create React App. This repository contains the source code, styles, and static assets used to build and deploy the site.
